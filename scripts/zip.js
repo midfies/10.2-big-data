@@ -51,8 +51,8 @@
     return statsObj;
   }
 
-  function highest(currentneighborhood, nextNeighborhood) {
-    return nextNeighborhood[1] - currentneighborhood[1];
+  function highest(currentNeighborhood, nextNeighborhood) {
+    return nextNeighborhood[1] - currentNeighborhood[1];
   }
 
   getData();

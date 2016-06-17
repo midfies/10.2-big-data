@@ -13,28 +13,30 @@
       <h3>Let's focus only on transforming this collection. No need to
         invoke a constructor, or pass off control to Handlebars.</h3>
         <h3>Start simple:
-          <p>
-            1. Transform the initial collection into
+          <ul>
+            <li>
+							Transform the initial collection into
               an array of each object's properties.
-          </p>
-          <p>
-            2. Next, try combining that
-              new collection with some other valuable info such as the coordinates
-              for each zip.
-          </p>
-          <p>
-            3. Also remove redundancies like the county, borough, city and state since we
-              already know the context, as our app would theoretically show, too.
-          </p>
-          <p>
-            4. For the zips where we have two or more neighborhoods, let's
-              eliminate all but the first one ("Greenwich Village, SoHo"
-              becomes "Greenwich Village").
-          </p>
-          <p>
-            5. Populate an array of the five 'densest' neighborhoods based on
-              zip occurrences.
-          </p>
+ 						</li>
+						<strong>We first want to pick up on:</strong>
+					<ol>
+						<li>
+							The zip code
+						</li>
+						<li>
+							Its address (if appliable, otherwise 'undefined')
+						</li>
+						<li>
+							Its neighborhood (same as address, but there should be only one neighborhood for each zip. Remove any additional neighborhoods beyond that - ex: "Greenwich Village, SoHo" becomes "Greenwich Village").
+						</li>
+						<li>
+							Ensure that this new collection also contains the coordinates for each zip. We ideally want this "coordinates" property to be its own object with "lat" and "lng" properties since we'd like to incorporate Google Maps later.
+						</li>
+					</ol>
+					<li>
+						Finally, populate a stats object to pick up on the top five neighborhoods associated with the most zips in Manhattan!
+					</li>
+					</ul>
         </h3>
     <script src="/vendor/scripts/jquery-2.1.4.js"></script>
     <script src="/scripts/zip.js"></script>
