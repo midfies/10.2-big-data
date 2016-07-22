@@ -18,23 +18,23 @@
 							Transform the initial collection into
               an array of each object's properties.
  						</li>
-						<strong>We first want to pick up on:</strong>
+						<strong>We first want to pick up on only a few properties, therefore, you may need to build these objects out dynamically with just the following properties:</strong>
 					<ol>
 						<li>
 							The zip code
 						</li>
 						<li>
-							Its address (if appliable, otherwise 'undefined')
+              Its neighborhood (there should be only one neighborhood for each zip. Remove any additional neighborhoods beyond that - ex: "Greenwich Village, SoHo" becomes "Greenwich Village").
 						</li>
 						<li>
-							Its neighborhood (same as address, but there should be only one neighborhood for each zip. Remove any additional neighborhoods beyond that - ex: "Greenwich Village, SoHo" becomes "Greenwich Village").
+              Its address (if appliable, otherwise null)
 						</li>
 						<li>
-							Ensure that this new collection also contains the coordinates for each zip. We ideally want this "coordinates" property to be its own object with "lat" and "lng" properties since we'd like to incorporate Google Maps later.
+							Ensure that this new collection also contains the coordinates for each zip. The "coordinates" property should be its own object with "lat" and "lng" properties since we'd like to incorporate Google Maps later.
 						</li>
 					</ol>
 					<li>
-						Finally, populate a stats object to pick up on the top five neighborhoods associated with the most zips in Manhattan!
+						Finally, populate a top five array of neighborhood objects (in descending order) based on the number of zips they associate with! Each object should have two properties: the neighborhood, and the total number of zip codes. For example, the first element in the top five array should be an object with a "neighborhood" property equal to Midtown, and a "total" property equal to 37.
 					</li>
 					</ul>
         </h3>

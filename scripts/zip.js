@@ -1,10 +1,6 @@
 (function(module) {
-  function Zip (opts) {
-    for (key in opts) {
-      this[key] = opts[key];
-    }
-  };
-
+  var zip = {};
+  
   getData = function() {
     $.getJSON('/data/manhattan.json', function(data) {
       // TODO: start here!
@@ -12,5 +8,5 @@
   };
 
   getData();
-  module.Zip = Zip;
+  module.zip = zip;
 })(window);
